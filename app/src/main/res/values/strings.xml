@@ -2,6 +2,12 @@
     <!--  对应Manifest文件中设置APP标题的字符串  -->
     <string name="app_name">我的第一个应用</string>
     <string name="middle_contenet">Hello world</string>
+    <string name="userName">姓名</string>
+    <string name="ID">学号</string>
+    <string name="buttonFirst">点击我~</string>
+    <string name="buttonSecond">点击我~~</string>
+    <string name="buttonThird">点击我~~~</string>
+    <string name="text_view_hello_world">TextView</string>
 </resources>
 
 
