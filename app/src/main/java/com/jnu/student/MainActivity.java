@@ -81,16 +81,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
          * */
 
         /**
-         * 【5.2】创建View.OnClickListener对象，setOnClickListener()的形参为View.OnClickListener对象
+         * 【5.2】button.setOnClickListener()的形参可以使用Lambda表达式来简化匿名内部类View.OnClickListener的写法
          * button.setOnClickListener(this);
          * */
-        View.OnClickListener clickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                MyOnClick(view);
-            }
-        };
-        button.setOnClickListener(clickListener);
+        button.setOnClickListener(v -> {
+            // 响应事件的代码
+            MyOnClick(v);
+        });
         /**
          * 【5.3】MainActivity类实现View.OnClickListener接口，setOnClickListener()的形参为当前MainActivity对象this
          * */
