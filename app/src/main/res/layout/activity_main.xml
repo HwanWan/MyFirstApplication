@@ -22,27 +22,68 @@
         android:text="@string/middle_contenet"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.187" />
+        app:layout_constraintVertical_bias="0.092" />
+
+    <TextView
+        android:id="@+id/text_view_hello_world"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_weight="1"
+        android:text="@string/text_view_hello_world"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textHello_World" />
 
     <LinearLayout
-        android:layout_width="295dp"
-        android:layout_height="109dp"
-        android:layout_marginTop="36dp"
+        android:id="@+id/linearLayout2"
+        android:layout_width="164dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="44dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.449"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textHello_World">
+        app:layout_constraintTop_toBottomOf="@+id/text_view_hello_world">
 
         <TextView
-            android:id="@+id/text_view_hello_world"
+            android:id="@+id/text_change_Hello"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/text_view_hello_world" />
+            android:rotationX="0"
+            android:text="@string/text_change_Hello"
+            android:textSize="60px" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="41dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/text_change_JNU"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/text_change_JNU"
+            android:textSize="60px" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button_change_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/button_change_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

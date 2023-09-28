@@ -7,7 +7,10 @@
     <string name="buttonFirst">点击我~</string>
     <string name="buttonSecond">点击我~~</string>
     <string name="buttonThird">点击我~~~</string>
-    <string name="text_view_hello_world">TextView</string>
+    <string name="text_view_hello_world">你好 Android</string>
+    <string name="text_change_Hello">Hello</string>
+    <string name="text_change_JNU">JNU</string>
+    <string name="button_change_text">change text</string>
 </resources>
 
 

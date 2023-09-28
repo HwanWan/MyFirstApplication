@@ -1,14 +1,20 @@
 package com.jnu.student;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,13 +57,89 @@ public class MainActivity extends AppCompatActivity {
          * 【3】 获取贷源:getResources()
          */
         //获取字将串资源
-        String string = getResources().getText(R.string.app_name).toString();
+        String string = getResources().getText(R.string.app_name,"你好Android").toString();
         Drawable drawable = getResources().getDrawable(R.mipmap.ic_launcher);
         /**
          * 【4】根据id获取资源: findViewById(id名)
          */
         TextView text = findViewById(R.id.text_view_hello_world);
-        text.setText("你好Android");
-        text.setTextSize((float)50);
+        text.setTextSize((float)30);
+
+
+        /**
+         * 【5】设置button控件的响应事件: 设置点击事件的监听者setOnClickListener（）
+         * */
+        Button button = (Button)findViewById(R.id.button_change_text);
+        /**
+         * 【5.1】setOnClickListener()的形参为匿名类
+         * button.setOnClickListener(new View.OnClickListener() {
+         *     @Override
+         *     public void onClick(View view) {
+         *         MyOnClick(view);
+         *     }
+         * });
+         * */
+
+        /**
+         * 【5.2】创建View.OnClickListener对象，setOnClickListener()的形参为View.OnClickListener对象
+         * button.setOnClickListener(this);
+         * */
+        View.OnClickListener clickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MyOnClick(view);
+            }
+        };
+        button.setOnClickListener(clickListener);
+        /**
+         * 【5.3】MainActivity类实现View.OnClickListener接口，setOnClickListener()的形参为当前MainActivity对象this
+         * */
+        button.setOnClickListener(this);
+
+
+    }
+    /**
+     * 【5.3】MainActivity类实现View.OnClickListener接口，setOnClickListener()的形参为当前MainActivity对象this
+     * */
+    @Override
+    public void onClick(View view) {
+        /**
+         * 【8】设置日志：Log.i/v/w/e()
+         * */
+        Log.i("MainActivity","开始执行button控件的onclick响应函数");
+        MyOnClick(view);
+        /**
+         * 【6】设置短暂提示消息：Toast.makeText().show()
+         * */
+        Toast.makeText(MainActivity.this,"交换了文本内容",Toast.LENGTH_LONG).show();
+        /**
+         * 【7】设置暂停式提示消息：AlertDialog.Builder.setXxx().create().show()
+         * */
+        new AlertDialog.Builder(MainActivity.this)
+                .setTitle("提示标题")
+                .setMessage("已交换文本内容")
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // 在这里编写点击确定按钮后的逻辑
+                    }
+                })
+                .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // 在这里编写点击取消按钮后的逻辑
+                    }
+                })
+                .create().show();
+        Log.i("MainActivity","结束执行button控件的onclick响应函数");
+
+    }
+    /**
+     * 【5.4】在布局文件中将button控件绑定自定义函数
+     * */
+    public void MyOnClick(View view) {
+        TextView text_change_Hello = findViewById(R.id.text_change_Hello);
+         TextView text_change_JNU = findViewById(R.id.text_change_JNU);
+         CharSequence textHello = text_change_Hello.getText();
+         text_change_Hello.setText(text_change_JNU.getText());
+         text_change_JNU.setText(textHello);
     }
 }
