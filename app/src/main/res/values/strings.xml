@@ -11,6 +11,8 @@
     <string name="text_change_Hello">Hello</string>
     <string name="text_change_JNU">JNU</string>
     <string name="button_change_text">change text</string>
+    <string name="imageView_shopItem_name" />
+    <string name="textView_shopItem_price" />
 </resources>
 
 
