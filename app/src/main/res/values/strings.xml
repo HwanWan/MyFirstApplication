@@ -13,6 +13,9 @@
     <string name="button_change_text">change text</string>
     <string name="imageView_shopItem_name" />
     <string name="textView_shopItem_price" />
+    <string name="string_itemName">书本名字：</string>
+    <string name="string_button_ok">确定</string>
+    <string name="EditText_booTitle">请输入书名...</string>
 </resources>
 
 

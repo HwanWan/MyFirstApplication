@@ -2,26 +2,25 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!--
-        Manifest文件配置APP给操作系统的声明文件，在安装该APP的时候会读取该文件
-        android:label ==》 记录APP名字，修改APP标题：修改res/values/strings.xml中app_name的值
-        android:icon  ==》 记录APP的图标
-    -->
     <application
-        android:label="@string/app_name"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFirstApplication"
         tools:targetApi="31">
         <activity
+            android:name=".mainActivity.BookItemDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".mainActivity.BookListMainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

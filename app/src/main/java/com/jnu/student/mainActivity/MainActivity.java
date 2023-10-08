@@ -1,22 +1,10 @@
 package com.jnu.student.mainActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.ContextMenu;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.Toast;
 
 import com.jnu.student.R;
-import com.jnu.student.adapter.RecycleViewBookAdpater;
-import com.jnu.student.data.Book;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -102,6 +90,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
+
+
 //    /**
 //     * 【5.3】MainActivity类实现View.OnClickListener接口，setOnClickListener()的形参为当前MainActivity对象this
 //     * */
