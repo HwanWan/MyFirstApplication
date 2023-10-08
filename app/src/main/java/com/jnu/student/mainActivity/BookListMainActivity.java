@@ -37,15 +37,15 @@ public class BookListMainActivity extends AppCompatActivity {
         /**
          * 【6】创建RecyclerView
          * */
-        //【6.1】加载含RecyclerView布局的布局文件
+        //【6.1】加载RecyclerView控件
         RecyclerView maimRecyclerView = findViewById(R.id.recycle_view_books);
         //【6.2】生成布局管理器
         maimRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         //【6.3】设置适配器
         ArrayList<Book> books = new ArrayList<>();
         for (int i=0;i<20;i++){
-            books.add(new Book("软件项目管理案例教程（第4版）", R.drawable.book_2));
             books.add(new Book("创新工程实践", R.drawable.book_no_name));
+            books.add(new Book("软件项目管理案例教程（第4版）", R.drawable.book_2));
             books.add(new Book("信息安全数学基础（第2版）", R.drawable.book_1));
         }
         RecycleViewBookAdpater recycleViewBookAdpater = new RecycleViewBookAdpater(books);

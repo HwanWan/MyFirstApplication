@@ -12,7 +12,6 @@ import com.jnu.student.R;
 import com.jnu.student.data.Book;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * 内部类：RecyclerView
@@ -22,7 +21,7 @@ public class RecycleViewBookAdpater extends RecyclerView.Adapter<RecycleViewBook
     private ArrayList<Book> localDataSet;
 
     /**
-     * 加载布局文件里面的控件
+     * 加载布局文件里面的控件: 将布局文件的控件与控件对象绑定
      */
     public class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView title;
@@ -61,7 +60,7 @@ public class RecycleViewBookAdpater extends RecyclerView.Adapter<RecycleViewBook
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         // Create a new view, which defines the UI of the list item
         View view = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.shop_item_row, viewGroup, false);
+                .inflate(R.layout.book_item_row, viewGroup, false);
 
         return new ViewHolder(view);
     }
