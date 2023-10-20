@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
          *    R表示res包、layout表示在layout目录、activity_main为布局文件名
          *    布局文件为==》 res/layout/activity_main.xml
          */
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_pageview);
 
 //        /**
 //         *【2.2】setContentView()的形参为布局对象: 通过java代码设置布局
