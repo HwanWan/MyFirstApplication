@@ -44,6 +44,7 @@ public class BookRecycleViewAdpater extends RecyclerView.Adapter<BookRecycleView
         }
         public ViewHolder(View bookItemview) {
             super(bookItemview);
+            // 将每个项的布局文件里的控件与控件对象绑定
             title = (TextView) bookItemview.findViewById(R.id.text_view_book_title);
             coverResourceId = (ImageView) bookItemview.findViewById(R.id.image_view_book_cover);
 

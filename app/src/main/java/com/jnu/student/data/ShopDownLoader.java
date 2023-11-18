@@ -6,12 +6,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -46,7 +43,9 @@ public class ShopDownLoader {
                 reader.close();
                 // 处理响应数据
                 responseData = response.toString();
-                System.out.println(responseData);
+                // System.out.println(responseData);
+                Log.i("downloadContent",responseData);
+
             } else {
                 Log.e("Error: ", String.valueOf(responseCode));
             }

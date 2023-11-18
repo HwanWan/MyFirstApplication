@@ -8,6 +8,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.jnu.student.Fragment.BookItemFragment;
 import com.jnu.student.Fragment.BrowserFragment;
+import com.jnu.student.Fragment.ClockViewFragment;
 import com.jnu.student.Fragment.TencentMapFragment;
 
 /**
@@ -29,12 +30,14 @@ public class PageViewFragmentAdapter extends FragmentStateAdapter {
                 return TencentMapFragment.newInstance();
             case 2: // 第二个滑块绑定BrowserFragment
                 return BrowserFragment.newInstance();
+            case 3: // 第三个滑块绑定ClockViewFragment
+                return ClockViewFragment.newInstance();
         }
         return BookItemFragment.newInstance();
     }
 
     @Override
     public int getItemCount() {
-        return 3;
+        return 4;
     }
 }

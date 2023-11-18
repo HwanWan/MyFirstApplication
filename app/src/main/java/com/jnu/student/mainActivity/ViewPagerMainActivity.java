@@ -39,6 +39,9 @@ public class ViewPagerMainActivity extends AppCompatActivity {
                     case 2: // 第三个滑块的标题栏
                         tab.setText(R.string.tab_caption_2_browser);
                         break;
+                    case 3: // 第三个滑块的标题栏
+                        tab.setText("Clock");
+                        break;
                 }
 
             }

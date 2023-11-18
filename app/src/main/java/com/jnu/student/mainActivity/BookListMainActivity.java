@@ -156,8 +156,8 @@ public class BookListMainActivity extends AppCompatActivity {
                 //设置暂停式提示消息：AlertDialog.Builder.setXxx().create().show()
                 new AlertDialog.Builder(BookListMainActivity.this)
                         .setTitle("提示")
-                        .setMessage("确认删除吗？")
-                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        .setMessage("Usre删除吗？")
+                        .setPositiveButton("YES！", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 // 在这里编写点击确定按钮后的逻辑
                                 // 获取当前数据的位置
