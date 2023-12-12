@@ -42,6 +42,9 @@ public class ViewPagerMainActivity extends AppCompatActivity {
                     case 3: // 第三个滑块的标题栏
                         tab.setText("Clock");
                         break;
+                    case 4: // 第三个滑块的标题栏
+                        tab.setText("Game");
+                        break;
                 }
 
             }

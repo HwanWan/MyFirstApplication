@@ -132,13 +132,11 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback  {
          * */
         ArrayList<GameSpriter> gameSpriters=new ArrayList<GameSpriter>();
         for (int i = 0; i < 3; i++) {
-            gameSpriters.add(new GameSpriter(Math.random(),Math.random(),R.drawable.dishu));
+            gameSpriters.add(new GameSpriter(Math.random(),Math.random(),R.drawable.gamebook));
         }
-
         /**
          * 2.创建画布
          * */
-
         // 2.1.创建一个 Canvas 对象【画布】，并将其设置为 Bitmap 的 Canvas
         Canvas canvas = getHolder().lockCanvas();
         // 2.2.创建画布的背景避免刷新的图片视觉残留
@@ -205,7 +203,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback  {
             // 创建一个 Bitmap 对象，并将图片加载到其中
             Bitmap bitmap = BitmapFactory.decodeResource(getResources(), resourceID);
             // 设置图片大小
-            Bitmap scaledBitmap = Bitmap.createScaledBitmap(bitmap, 200, 200, true);
+            Bitmap scaledBitmap = Bitmap.createScaledBitmap(bitmap, 300, 300, true);
             // 使用 null 作为 paint 参数绘制图片，并让图片随机出现在画布的某个位置
             canvas.drawBitmap(scaledBitmap, (int)(canvas.getWidth()*relatedX) ,(int)(canvas.getHeight()*relatedY) , null);
         }
